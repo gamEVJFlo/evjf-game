@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Simulation EVJF</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Simulation EVJF</h1>
+  
+  <p>
+    Bonjour Player 1.<br><br>
+    Tu es sur le point d’entrer dans une simulation immersive conçue pour préparer une mission unique.<br>
+    Chaque choix que tu feras influencera le déroulement de cette expérience.<br><br>
+    Es-tu prête à lancer la simulation ?
+  </p>
+
+  <button onclick="playSound(); location.href='profil.html'">
+    Définir mon profil utilisateur
+  </button>
+
+  <button onclick="playSound(); location.href='jeu.html'">
+    Débuter la partie
+  </button>
+</div>
+
+<audio id="clickSound" src="sound.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
