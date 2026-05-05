@@ -7,33 +7,46 @@ body {
 }
 
 .container {
-  margin-top: 100px;
+  max-width: 700px;
+  margin: 80px auto;
   padding: 20px;
 }
 
-h1 {
+h1, h2 {
   color: #D4AF37;
-  letter-spacing: 2px;
 }
 
-p {
-  max-width: 600px;
-  margin: auto;
-  line-height: 1.6;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #2b1b16;
+  border: 1px solid #5D4037;
+  color: #D7CCC8;
 }
 
 button {
   background: #5D4037;
   color: white;
   border: 1px solid #D4AF37;
-  padding: 15px 25px;
-  margin: 10px;
+  padding: 12px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  background: #D4AF37;
-  color: #1B0F0A;
+.player-block {
+  padding: 10px;
+  border: 1px solid #5D4037;
+  margin-bottom: 10px;
 }
-body 
