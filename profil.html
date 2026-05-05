@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Profil joueur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Création du profil utilisateur</h2>
+
+<form action="https://formspree.io/f/xeengyrb" method="POST">
+
+<!-- 1 -->
+<label>Code joueur</label>
+<input type="text" name="code_joueur" required>
+
+<!-- 2 -->
+<label>Nombre de coéquipières</label>
+<input type="number" name="nombre_equipe" required>
+
+<!-- 3 -->
+<label>Profil des alliés</label>
+<textarea name="equipe"></textarea>
+
+<!-- 4 -->
+<p>Durée optimale</p>
+<select name="duree">
+  <option>1 journée</option>
+  <option>1 week-end</option>
+  <option>1 semaine</option>
+  <option>1 mois</option>
+</select>
+
+<!-- 5 -->
+<p>Temps de récupération</p>
+<select name="recuperation">
+  <option>0h</option>
+  <option>1 journée</option>
+  <option>3 jours</option>
+  <option>3 semaines</option>
+</select>
+
+<!-- 6 -->
+<p>Niveau de chaos</p>
+<select name="chaos">
+  <option>Nintendogs</option>
+  <option>Mario</option>
+  <option>Resident Evil</option>
+</select>
+
+<!-- 7 -->
+<p>Modules de mission (0 à 10)</p>
+
+<label>Cooking Mama</label>
+<input type="range" name="cooking" min="0" max="10">
+
+<label>Barbie coiffeuse</label>
+<input type="range" name="barbie" min="0" max="10">
+
+<label>Trivial Pursuit</label>
+<input type="range" name="trivial" min="0" max="10">
+
+<label>Need for Speed</label>
+<input type="range" name="speed" min="0" max="10">
+
+<!-- 8 -->
+<p>Terrain de mission</p>
+<select name="terrain">
+  <option>Urbain</option>
+  <option>Montagne</option>
+  <option>Plage</option>
+</select>
+
+<br><br>
+
+<button type="submit">Valider le profil</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
