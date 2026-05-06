@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Initialisation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Initialisation de la simulation</h2>
+
+  <p id="loadingText">
+    Installation du plateau de jeu en cours...
+  </p>
+
+  <div class="loader"></div>
+</div>
+
+<script>
+let messages = [
+  "Connexion au serveur EVJF...",
+  "Analyse du profil joueur...",
+  "Génération des missions...",
+  "Chargement des coéquipières...",
+  "Finalisation..."
+];
+
+let index = 0;
+
+setInterval(() => {
+  if(index < messages.length){
+    document.getElementById("loadingText").innerText = messages[index];
+    index++;
+  }
+}, 2000);
+</script>
+
+</body>
+</html>
