@@ -55,43 +55,47 @@ if (funButton) {
    (PAGE jeu.html)
 ========================= */
 
-let messages = [
-  "Connexion au serveur EVJF...",
-  "Analyse du profil joueur...",
-  "Génération des missions...",
-  "Chargement des coéquipières...",
-  "Finalisation..."
-];
+if (document.getElementById("progressBar")) {
 
-let progress = 0;
-let index = 0;
+  let messages = [
+    "Connexion au serveur EVJF...",
+    "Analyse du profil joueur...",
+    "Génération des missions...",
+    "Chargement des coéquipières...",
+    "Finalisation..."
+  ];
 
-const interval = setInterval(() => {
+  let progress = 0;
+  let index = 0;
 
-  const bar = document.getElementById("progressBar");
-  const text = document.getElementById("progressText");
-  const loading = document.getElementById("loadingText");
+  const interval = setInterval(() => {
 
-  progress += 5;
+    const bar = document.getElementById("progressBar");
+    const text = document.getElementById("progressText");
+    const loading = document.getElementById("loadingText");
 
-  if (bar) bar.style.width = progress + "%";
-  if (text) text.innerText = progress + "%";
+    progress += 5;
 
-  if (progress % 20 === 0 && index < messages.length) {
-    if (loading) loading.innerText = messages[index];
-    index++;
-  }
+    if (bar) bar.style.width = progress + "%";
+    if (text) text.innerText = progress + "%";
 
-  if (progress >= 100) {
-    clearInterval(interval);
-
-    if (loading) loading.style.display = "none";
-
-    const overlay = document.getElementById("errorOverlay");
-    if (overlay) {
-      overlay.style.display = "flex";
-      overlay.innerText = "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
+    if (progress % 20 === 0 && index < messages.length) {
+      if (loading) loading.innerText = messages[index];
+      index++;
     }
-  }
 
-}, 300);
+    if (progress >= 100) {
+      clearInterval(interval);
+
+      if (loading) loading.style.display = "none";
+
+      const overlay = document.getElementById("errorOverlay");
+      if (overlay) {
+        overlay.style.display = "flex";
+        overlay.innerText = "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
+      }
+    }
+
+  }, 300);
+
+}
