@@ -9,26 +9,21 @@
 <body>
 
 <div class="container">
+
   <h2>Initialisation de la simulation</h2>
 
   <p id="loadingText">
     Installation du plateau de jeu en cours...
   </p>
 
-  <!-- Message erreur caché -->
-  <p id="errorMessage" style="display:none;">
-    ❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement
-  </p>
-
-  <!-- Barre de progression -->
+  <!-- Barre de progression + message intégré -->
   <div class="progress-container">
     <div id="progressBar"></div>
+    <div id="errorOverlay"></div>
   </div>
 
   <p id="progressText">0%</p>
 
-  
-  
 </div>
 
 <script>
@@ -46,26 +41,30 @@ let index = 0;
 
 let interval = setInterval(() => {
 
-  // Mise à jour du pourcentage
+  // progression
   progress += 5;
+
   document.getElementById("progressBar").style.width = progress + "%";
   document.getElementById("progressText").innerText = progress + "%";
 
-  // Changement des messages
+  // messages
   if (progress % 20 === 0 && index < messages.length) {
     document.getElementById("loadingText").innerText = messages[index];
     index++;
   }
 
-  // Quand on atteint 100%
+  // fin
   if (progress >= 100) {
     clearInterval(interval);
 
     document.getElementById("loadingText").style.display = "none";
-    document.getElementById("errorMessage").style.display = "block";
+
+    const overlay = document.getElementById("errorOverlay");
+    overlay.style.display = "flex";
+    overlay.innerText = "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
   }
 
-}, 150);
+}, 300);
 
 </script>
 
