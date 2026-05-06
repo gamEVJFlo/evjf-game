@@ -69,3 +69,28 @@ button {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.progress-container {
+  width: 100%;
+  background: #2b1b16;
+  border: 1px solid #5D4037;
+  margin-top: 20px;
+}
+
+#progressBar {
+  width: 0%;
+  height: 20px;
+  background: #D4AF37;
+  transition: width 0.2s;
+}
+
+#progressText {
+  margin-top: 10px;
+}
+
+#errorMessage {
+  color: red;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 30px;
+}
