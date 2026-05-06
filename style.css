@@ -49,4 +49,8 @@ button {
   padding: 10px;
   border: 1px solid #5D4037;
   margin-bottom: 10px;
+  border-radius: 5px;
+}
+* {
+  box-sizing: border-box;
 }
