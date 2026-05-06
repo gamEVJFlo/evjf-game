@@ -15,10 +15,21 @@
     Installation du plateau de jeu en cours...
   </p>
 
-  <div class="loader"></div>
+  <!-- Barre de progression -->
+  <div class="progress-container">
+    <div id="progressBar"></div>
+  </div>
+
+  <p id="progressText">0%</p>
+
+  <!-- Message erreur caché -->
+  <p id="errorMessage" style="display:none;">
+    ❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement
+  </p>
 </div>
 
 <script>
+
 let messages = [
   "Connexion au serveur EVJF...",
   "Analyse du profil joueur...",
@@ -27,14 +38,32 @@ let messages = [
   "Finalisation..."
 ];
 
+let progress = 0;
 let index = 0;
 
-setInterval(() => {
-  if(index < messages.length){
+let interval = setInterval(() => {
+
+  // Mise à jour du pourcentage
+  progress += 5;
+  document.getElementById("progressBar").style.width = progress + "%";
+  document.getElementById("progressText").innerText = progress + "%";
+
+  // Changement des messages
+  if (progress % 20 === 0 && index < messages.length) {
     document.getElementById("loadingText").innerText = messages[index];
     index++;
   }
-}, 2000);
+
+  // Quand on atteint 100%
+  if (progress >= 100) {
+    clearInterval(interval);
+
+    document.getElementById("loadingText").style.display = "none";
+    document.getElementById("errorMessage").style.display = "block";
+  }
+
+}, 150);
+
 </script>
 
 </body>
