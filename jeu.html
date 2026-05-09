@@ -8,6 +8,11 @@
 
 <body>
 
+<!-- Bouton menu -->
+<a href="index.html" class="menu-button">
+  ⬅ Menu principal
+</a>
+
 <div class="container">
 
   <h2>Initialisation de la simulation</h2>
@@ -24,9 +29,10 @@
 
   <p id="progressText">0%</p>
 
-  <!-- Bouton caché -->
+  <!-- Bouton divertissement -->
   <button id="funButton" style="display:none;">
-    Afin de patienter, nous vous proposons un divertissement
+    Afin de patienter,<br>
+    nous vous proposons un divertissement
   </button>
 
   <!-- Vidéo -->
@@ -72,10 +78,10 @@ let interval = setInterval(() => {
     overlay.innerText =
     "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
 
-    // Bouton après 10 sec
+    // Apparition bouton après 5 sec
     setTimeout(() => {
       document.getElementById("funButton").style.display = "block";
-    }, 10000);
+    }, 5000);
 
   }
 
@@ -86,6 +92,7 @@ let interval = setInterval(() => {
 ========================= */
 
 const videos = [
+
   "https://www.youtube.com/embed/00oJQDwNDyY",
   "https://www.youtube.com/embed/BfW72FjVC6k",
   "https://www.youtube.com/embed/yJfh59iEscg",
@@ -96,6 +103,7 @@ const videos = [
   "https://www.youtube.com/embed/aZ4NlkFxbhM",
   "https://www.youtube.com/embed/__ON3C3GRis",
   "https://www.youtube.com/embed/uAa4lMf3jSg"
+
 ];
 
 document.getElementById("funButton").addEventListener("click", () => {
