@@ -16,7 +16,6 @@
     Installation du plateau de jeu en cours...
   </p>
 
-  <!-- Barre de progression + message intégré -->
   <div class="progress-container">
     <div id="progressBar"></div>
     <div id="errorOverlay"></div>
@@ -41,40 +40,36 @@ let index = 0;
 
 let interval = setInterval(() => {
 
-  // progression
   progress += 5;
 
   document.getElementById("progressBar").style.width = progress + "%";
   document.getElementById("progressText").innerText = progress + "%";
 
-  // messages
   if (progress % 20 === 0 && index < messages.length) {
     document.getElementById("loadingText").innerText = messages[index];
     index++;
   }
 
-  // fin
   if (progress >= 100) {
+
     clearInterval(interval);
 
     document.getElementById("loadingText").style.display = "none";
 
     const overlay = document.getElementById("errorOverlay");
+
     overlay.style.display = "flex";
-    overlay.innerText = "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
+
+    overlay.innerText =
+    "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
+
   }
 
 }, 300);
 
-  
-  <button id="funButton" style="display:none;">
-  Afin de patienter, nous vous proposons un divertissement
-</button>
-
-<div id="videoContainer"></div>
-  
-
 </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
