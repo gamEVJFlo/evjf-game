@@ -31,9 +31,16 @@ function addPlayer() {
 ========================= */
 
 const videos = [
-  "https://www.youtube.com/embed/VIDEO_ID_1",
-  "https://www.youtube.com/embed/VIDEO_ID_2",
-  "https://www.youtube.com/embed/VIDEO_ID_3"
+  "https://www.youtube.com/embed/00oJQDwNDyY?is=RD3Xaxb9hiaYB6Hb",
+  "https://www.youtube.com/embed/BfW72FjVC6k?is=-iBI0BYQbYiM1d5g",
+  "https://www.youtube.com/embed/yJfh59iEscg?is=TXzRPOS8vi6is2x0",
+  "https://www.youtube.com/embed/Y0pdUyFC7As?is=-WzLznTt667CZd-u",
+  "https://www.youtube.com/embed/
+  "https://www.youtube.com/embed/
+  "https://www.youtube.com/embed/
+  "https://www.youtube.com/embed/
+  "https://www.youtube.com/embed/
+  "https://www.youtube.com/embed/
 ];
 
 const funButton = document.getElementById("funButton");
