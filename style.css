@@ -104,3 +104,60 @@ button {
 
   background: rgba(0,0,0,0.6);
 }
+
+#funButton {
+
+  display: block;
+  margin: 40px auto;
+
+  padding: 20px 30px;
+
+  font-size: 24px;
+  font-family: Georgia, serif;
+
+  font-weight: bold;
+
+  color: #D4AF37;
+
+  background: #2b1b16;
+
+  border: 2px solid #D4AF37;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+#funButton:hover {
+  background: #3E2723;
+  transform: scale(1.03);
+}
+
+/* =========================
+   BOUTON MENU
+========================= */
+
+.menu-button {
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  text-decoration: none;
+
+  color: #D4AF37;
+
+  border: 1px solid #D4AF37;
+
+  padding: 10px 15px;
+
+  background: rgba(0,0,0,0.4);
+
+  font-weight: bold;
+}
+
+.menu-button:hover {
+  background: #3E2723;
+}
