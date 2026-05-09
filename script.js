@@ -35,12 +35,12 @@ const videos = [
   "https://www.youtube.com/embed/BfW72FjVC6k?is=-iBI0BYQbYiM1d5g",
   "https://www.youtube.com/embed/yJfh59iEscg?is=TXzRPOS8vi6is2x0",
   "https://www.youtube.com/embed/Y0pdUyFC7As?is=-WzLznTt667CZd-u",
-  "https://www.youtube.com/embed/
-  "https://www.youtube.com/embed/
-  "https://www.youtube.com/embed/
-  "https://www.youtube.com/embed/
-  "https://www.youtube.com/embed/
-  "https://www.youtube.com/embed/
+  "https://www.youtube.com/embed/NpqfUI7DDB4?is=HjnM2F-vS_trHchR",
+  "https://www.youtube.com/embed/y0sF5xhGreA?is=8oAIb6OnG_qA90Ih",
+  "https://www.youtube.com/embed/xFnoap4kcNY?is=uwYe7MM0ZKu5KmJF",
+  "https://www.youtube.com/embed/aZ4NlkFxbhM?is=TppbA0r_aC4N3U_Y",
+  "https://www.youtube.com/embed/__ON3C3GRis?is=hU8iLvUPIMEYr70U",
+  "https://www.youtube.com/embed/uAa4lMf3jSg?is=CJKtt2oejnrTGyuq",
 ];
 
 const funButton = document.getElementById("funButton");
