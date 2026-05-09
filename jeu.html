@@ -16,12 +16,21 @@
     Installation du plateau de jeu en cours...
   </p>
 
+  <!-- Barre -->
   <div class="progress-container">
     <div id="progressBar"></div>
     <div id="errorOverlay"></div>
   </div>
 
   <p id="progressText">0%</p>
+
+  <!-- Bouton caché -->
+  <button id="funButton" style="display:none;">
+    Afin de patienter, nous vous proposons un divertissement
+  </button>
+
+  <!-- Vidéo -->
+  <div id="videoContainer"></div>
 
 </div>
 
@@ -63,9 +72,44 @@ let interval = setInterval(() => {
     overlay.innerText =
     "❌ ERREUR ! Date non identifiée ! Merci de réessayer ultérieurement";
 
+    // Bouton après 10 sec
+    setTimeout(() => {
+      document.getElementById("funButton").style.display = "block";
+    }, 10000);
+
   }
 
 }, 300);
+
+/* =========================
+   VIDEOS ALEATOIRES
+========================= */
+
+const videos = [
+
+  "https://www.youtube.com/embed/7MFKy7DJsCY",
+  "https://www.youtube.com/embed/y6rZfpSL1RQ",
+  "https://www.youtube.com/embed/3i1V5LV6l1A"
+
+];
+
+document.getElementById("funButton").addEventListener("click", () => {
+
+  const random =
+  videos[Math.floor(Math.random() * videos.length)];
+
+  document.getElementById("videoContainer").innerHTML = `
+
+    <iframe
+      width="100%"
+      height="315"
+      src="${random}"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+  `;
+});
 
 </script>
 
